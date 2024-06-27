@@ -4,8 +4,9 @@ import HomePage from './pages/HomePage.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage.js';
-import './App.css';
 import CampsiteDetailPage from './pages/CampsiteDetailPage.js';
+import AboutPage from './pages/AboutPage.js';
+import './App.css';
 
 function App() {
   return (
@@ -28,7 +29,11 @@ function App() {
           path='directory/:campsiteId' 
           element={<CampsiteDetailPage />} 
         />
-      </Routes>
+        <Route 
+          path='about'
+          element={<AboutPage />} 
+        />
+        </Routes>
       <Footer />
     </div>
   );
