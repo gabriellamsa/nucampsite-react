@@ -11,6 +11,7 @@ import AboutPage from './pages/AboutPage.js';
 import './App.css';
 import { fetchCampsites } from './features/campsites/campsitesSlice.js';
 import { fetchPartners } from './features/partners/partnersSlice.js';
+import { fetchPromotions } from './features/promotions/promotionsSlice.js';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchCampsites());
     dispatch(fetchPartners());
+    dispatch(fetchPromotions());
   }, [dispatch]);
   
   return (
